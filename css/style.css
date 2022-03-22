@@ -489,7 +489,11 @@ label {
     font-size: 125%;
 }
 
-input[type='text'], input[type='password'], input[type='email'], input[type='date'], textarea, .tagify {
+.required {
+    color: var(--accent);
+}
+
+input[type='text'], input[type='password'], input[type='email'], input[type='date'], input[type='number'], textarea, .tagify {
     width: 100%;
     background-color: var(--grey);
     border: none;
@@ -499,10 +503,10 @@ input[type='text'], input[type='password'], input[type='email'], input[type='dat
     font-size: 100%;
     box-shadow: var(--shadow-1);
 }
-input[type='text'], input[type='password'], input[type='email'], input[type='date'], .tagify {
+input[type='text'], input[type='password'], input[type='email'], input[type='date'], input[type='number'], .tagify {
     border-radius: 15px;
 }
-input[type='text'], input[type='password'], input[type='email'], input[type='date'], textarea {
+input[type='text'], input[type='password'], input[type='email'], input[type='date'], input[type='number'], textarea {
     padding: 0.5em;
 }
 textarea {
@@ -566,6 +570,10 @@ input[type='radio'] + label {
 .tags input[type='checkbox']:checked + label, .tags input[type='radio']:checked + label {
     color: var(--white);
     background-image: var(--gradient);
+}
+
+input[type='range'] {
+    width: 100%;
 }
 
 select {
