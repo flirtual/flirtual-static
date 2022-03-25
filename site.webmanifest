@@ -5,16 +5,42 @@
         {
             "src": "/android-chrome-192x192.png?v=2",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         },
         {
             "src": "/android-chrome-512x512.png?v=2",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#e9658b",
+    "background_color": "#e9658b",
     "start_url": "https://flirtu.al",
-    "display": "standalone"
+    "display": "standalone",
+    "categories": ["social"],
+    "shortcuts": [
+        {
+            "name": "Browse",
+            "url": "/",
+            "description": "Browse new profiles"
+        },
+        {
+            "name": "Matches",
+            "url": "/matches",
+            "description": "Check your matches"
+        },
+        {
+            "name": "Profile",
+            "url": "/me",
+            "description": "View your profile"
+        },
+        {
+            "name": "Settings",
+            "url": "/settings",
+            "description": "Change settings and edit your profile"
+        }
+    ],
+    "ovr_package_name": "zone.homie.flirtual.pwa"
 }
