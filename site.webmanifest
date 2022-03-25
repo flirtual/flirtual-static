@@ -24,22 +24,26 @@
         {
             "name": "Browse",
             "url": "/",
-            "description": "Browse new profiles"
+            "description": "Browse new profiles",
+            "icons": [{ "src": "/img/shortcuts/browse.png", "sizes": "256x256" }]
         },
         {
             "name": "Matches",
             "url": "/matches",
-            "description": "Check your matches"
+            "description": "Check your matches",
+            "icons": [{ "src": "/img/shortcuts/matches.png", "sizes": "256x256" }]
         },
         {
             "name": "Profile",
             "url": "/me",
-            "description": "View your profile"
+            "description": "View your profile",
+            "icons": [{ "src": "/img/shortcuts/profile.png", "sizes": "256x256" }]
         },
         {
             "name": "Settings",
             "url": "/settings",
-            "description": "Change settings and edit your profile"
+            "description": "Change settings and edit your profile",
+            "icons": [{ "src": "/img/shortcuts/settings.png", "sizes": "256x256" }]
         }
     ],
     "ovr_package_name": "zone.homie.flirtual.pwa"
