@@ -138,7 +138,7 @@ nav {
     z-index: 100;
     overflow: hidden;
     position: fixed;
-    width: 308px;
+    width: 475px;
     height: 310px;
     bottom: 0;
     font-family: Montserrat, sans-serif;
@@ -193,7 +193,7 @@ nav li {
     color: var(--white);
     font-size: 17px;
     display: block;
-    height: 40px;
+    height: 35px;
     animation: nav 1s;
 }
 nav li a {
