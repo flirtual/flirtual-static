@@ -1662,3 +1662,7 @@ a {
 .conversejs #icon-eye {
     display: none !important;
 }
+
+[aria-label][role~="tooltip"]::after {
+    font-family: Nunit, sans-serif;
+}
