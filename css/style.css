@@ -962,6 +962,15 @@ a {
 .swiper-pagination-bullet-active {
     background: var(--gradient);
 }
+.rmpfp {
+    position: absolute !important;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 .name {
     z-index: 1;
     position: absolute;
