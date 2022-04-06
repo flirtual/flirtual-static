@@ -894,13 +894,33 @@ a {
 }
 
 .buttons_top {
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    left: 50%;
     margin-top: -100px;
     text-align: center;
+    font-size: 80%;
+    transform: translateX(-50%);
 }
-.buttons_top form {
+.match_info {
+    text-align: center;
+}
+.buttons_top form, .match_info form {
     display: inline-block;
 }
-.buttons_top .notice {
+.buttons_top img, .match_info img {
+    height: 29px;
+    transform: translateY(3px);
+}
+.buttons_top button {
+    box-shadow: var(--shadow-3);
+}
+.buttons_top button:not(.btn-gradient):hover img, .match_info button:not(.btn-gradient):hover img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+.buttons_top .notice, .match_info .notice {
     margin-bottom: 40px;
 }
 .buttons_bottom {
