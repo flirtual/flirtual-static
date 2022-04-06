@@ -902,6 +902,10 @@ a {
     text-align: center;
     font-size: 80%;
     transform: translateX(-50%);
+    pointer-events: none;
+}
+.buttons_top > * {
+    pointer-events: all;
 }
 .match_info {
     text-align: center;
