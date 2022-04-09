@@ -14,8 +14,23 @@ function hide_nav() {
     document.querySelector("nav").classList.remove("open");
 }
 
-document.addEventListener("click", function(event) {
+function toggle_personal() {
+    if (!document.querySelector("nav li:last-child div").classList.contains("open")) {
+        show_personal();
+    } else {
+        hide_personal();
+    }
+}
+function show_personal() {
+    document.querySelector("nav li:last-child div").classList.add("open");
+}
+function hide_personal() {
+    document.querySelector("nav li:last-child div").classList.remove("open");
+}
+
+document.addEventListener("click", function (event) {
     if (event.target.closest("nav") === null) {
+        hide_personal();
         hide_nav();
     }
 });
@@ -31,7 +46,7 @@ function external_link(event, link) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper(".swiper", {
         slidesPerView: 1,
         navigation: {
