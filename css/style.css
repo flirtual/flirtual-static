@@ -139,7 +139,7 @@ nav {
     overflow: hidden;
     position: fixed;
     width: 475px;
-    height: 310px;
+    height: 400px;
     bottom: 0;
     font-family: Montserrat, sans-serif;
     pointer-events: none;
@@ -193,7 +193,7 @@ nav li {
     color: var(--white);
     font-size: 17px;
     display: block;
-    height: 35px;
+    height: 36px;
     animation: nav 1s;
 }
 nav li a {
@@ -203,6 +203,40 @@ nav li a {
 }
 nav li a:hover {
     opacity: 0.8;
+}
+nav li:last-child {
+    margin: -8px 5px;
+}
+nav li:last-child div {
+    position: absolute;
+    padding: 14px 16px 14px 88px;
+    background-color: var(--white);
+    border-radius: 36px;
+    box-shadow: var(--shadow-3);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+nav li:last-child div.open {
+    pointer-events: all;
+    opacity: 1;
+    transition: opacity 0.25s ease-out;
+}
+nav li:last-child a {
+    display: block;
+    padding: 10px;
+    color: var(--black);
+}
+nav li:last-child a:hover {
+    color: var(--accent);
+}
+nav li:last-child img {
+    position: absolute;
+    margin: 12px;
+    border-radius: 50%;
+    box-shadow: var(--shadow-1);
+    cursor: pointer;
+    user-select: none;
 }
 @keyframes nav {
     0% {
@@ -243,6 +277,23 @@ nav li a:hover {
         margin-top: 57px;
     }
 }
+@media only screen and (max-width: 991px) {
+    nav > a {
+        transform: translate(36px, 283px);
+    }
+    nav > a:hover {
+        transform: translate(36px, 283px) scale(0.98);
+    }
+    nav > span {
+        transform: translate(36px, 283px);
+    }
+    nav ul {
+        margin-top: 214px;
+    }
+    nav li:last-child {
+        transform: translateY(-226px);
+    }
+}
 
 footer {
     background-image: var(--gradient);
@@ -264,6 +315,7 @@ footer a {
     color: var(--white);
     text-decoration: none;
     cursor: pointer;
+    user-select: text;
 }
 footer a:hover {
     opacity: 0.8;
@@ -271,6 +323,9 @@ footer a:hover {
 footer img {
     height: 1em;
     filter: invert(100%) brightness(0.94);
+}
+footer .center {
+    user-select: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -903,6 +958,7 @@ a {
     font-size: 80%;
     transform: translateX(-50%);
     pointer-events: none;
+    user-select: none;
 }
 .buttons_top > * {
     pointer-events: all;
@@ -936,6 +992,7 @@ a {
     height: 1em;
     margin-right: 2px;
     transform: translateY(3px);
+    user-select: none;
 }
 .pfps {
     position: relative;
@@ -962,6 +1019,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
+    user-select: none;
 }
 .swiper-pagination-bullet-active {
     background: var(--gradient);
@@ -996,11 +1054,13 @@ a {
     left: 11px;
     bottom: 3px;
     width: calc(100% - 36px);
+    user-select: none;
 }
 .asl .tag {
     opacity: 0.8;
+    user-select: text;
 }
-.asl .badges {
+.asl .badges, .asl img {
     user-select: none;
 }
 .lastonline {
@@ -1018,6 +1078,7 @@ a {
 .profile .tags {
     margin-top: 8px;
     border-bottom: 1px solid var(--grey);
+    user-select: none;
 }
 .profile .tags:last-child {
     border-bottom: none;
@@ -1034,6 +1095,7 @@ a {
     text-decoration: none;
     background-color: var(--grey);
     box-shadow: var(--shadow-1);
+    user-select: text;
 }
 .tag.common, .interests span.common {
     background-image: var(--gradient);
@@ -1376,6 +1438,7 @@ a {
     border-radius: 15px;
     text-decoration: none;
     box-shadow: var(--shadow-2);
+    user-select: none;
 }
 .match:hover {
     background-color: var(--grey);
@@ -1389,10 +1452,12 @@ a {
 .match span {
     display: inline-block;
     transform: translate(16px, -32px);
+    user-select: text;
 }
 .match .right {
     display: block;
     transform: translate(-20px, 22px);
+    user-select: none;
 }
 .match:nth-child(2) .right {
     transform: translate(-91px, 22px);
